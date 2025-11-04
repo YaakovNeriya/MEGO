@@ -1,0 +1,153 @@
+from bisect import insort
+from itertools import count
+from operator import index
+from stringprep import map_table_b2
+
+# 1111111
+# a="asdasdsdf"
+# # unic=set(a)
+# new={}
+# for i in a:
+#     new.update({i:a.count(i)})
+# print(new)
+# 222222222
+# a=["as",12,"d"]
+# new=[]
+# for i in a:
+#     if not isinstance(i,str):
+#         a.remove(i)
+# print(a)
+# 33333333
+# a=["a","b"]
+# b=["c","b"]
+# def f(a,b):
+#     c=[]
+#     for i in a:
+#         if i in b:
+#             c.append(i)
+#     return c
+# print(f(a,b))
+# 44444444444
+# a={1:2,3:4,5:2}
+# b=list (set(a.values()))
+# print(b)
+# 55555555
+# a=[1,2,3,4,5,6]
+# na=a[1:]
+# na.append(a[0])
+# print(na)
+# 66666666666
+# a=[1,2,3,4,5,6,7]
+# while len(a)>1:
+#     i=1
+#     for j in range(len(a)//2):
+#         print(a[i])
+#         a.pop(i)
+#         i+=1
+# print(a)
+# 7777777777
+# a={1:2,3:4,5:2}
+# b=[]
+# for k,v in a.items():
+#     b.append((k,v))
+# print (b)
+# 8888888888
+
+# a={1:2,3:4,5:9}
+# mink=maxk=next(iter(a))
+# minv=maxv=a[mink]
+# for k,v in a.items():
+#     if v>maxv:
+#         maxv=v
+#         maxk=k
+#     elif v<minv:
+#         minv=v
+#         mink=k
+# print(maxk,maxv)
+# print(mink,minv)
+# 88888
+# a = {1:2, 3:4, 5:8}
+# max_key = max(a, key=a.get)
+# print(max_key)  # 3
+# 999999999
+# a="asdasdsaaaadd"
+# na={}
+# for i in a:
+#     na.update({i:a.count(i)})
+# print(na)
+# 10===============10
+# a=[1,2,3,6,7,9,"7"]
+# b=[3,2,1,6,8,9,"7"]
+# ind=0
+# c=[]
+# for i in a:
+#     if i in b and b.index(i)==ind:
+#             c.append(i)
+#     ind+=1
+# print(c)
+# 11==============11
+# b=[3,2,1,6,8,7]
+# c=[]
+# for i in range(len(b)+len(c)):
+#     m=min(b)
+#     c.append(m)
+#     b.pop(b.index(m))
+# print(c,b)
+# 11============11
+# nums=[3, 2, 1, 6, 8, 7]
+# for j in range(len(nums) - 1):
+#     for i in range(len(nums) - 1 - j):
+#         if nums[i]>nums[i + 1]:
+#             nums[i],nums[i + 1]=nums[i + 1],nums[i]
+# print(nums)
+# # 12================12
+# nums=[3, 2, 1, 6, 8, 7]
+# def f(nums):
+#     x=nums.copy()
+#     m1=max(x)
+#     x.remove(m1)
+#     m2=max(x)
+#     return m1,m2
+# print(f(nums),nums)
+# 12================12
+# nums=[3, 2, 1, 6, 8, 7]
+# def f(nums):
+#     m1,m2=sorted(nums)[-1],sorted(nums)[-2]
+#     return m1,m2
+# print(f(nums),nums)
+# 12================12
+# nums=[32, 23, 441, 6, 8666, 7]
+# def f(nums):
+#     x=sorted(nums,key= lambda n: len(str(n)))
+#     m1,m2=x[-1],x[-2]
+#     return m1,m2
+# print(f(nums),nums)
+# 13===========13
+# gra={"a":44,"b":66,"c":78}
+# x=max(gra) # ==(gra,key=lambda n: gra[n])  אותו דבר
+# print(x,gra[x])
+# 14=============14
+# list=[2,2,3,5,8,9,5,3,0,0,7,1,7,7]
+# def f(list):
+#     cop=list.copy()
+#     new=[]
+#     for i in list:
+#         del cop[0]
+#         if i in cop:
+#             new.append(i)
+#     return set(new)
+# print(f(list))
+# 15=============15
+people={
+    "a":14 ,
+    "b":19 ,
+    "c":18 ,
+    "d":20 ,
+        }
+lis1=[]
+lis2=[k for k,v in people.items() if v>18]
+for k,v in people.items():
+    if v>18:
+        lis1.append(k)
+print(lis1,lis2)
+
