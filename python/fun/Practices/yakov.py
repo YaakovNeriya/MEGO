@@ -1,2 +1,2 @@
-print("Shoki makaboki")
+print("Shoki yaakov")
 
