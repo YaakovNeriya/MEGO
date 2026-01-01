@@ -6,10 +6,7 @@ new_board=[[" 1", " 2", " 3"],
 first_ruond=0
 board = [i[:] for i in new_board]
 available_moves=[1, 2, 3, 4, 5, 6, 7, 8, 9]
-if random.randint(1, 2) == 1:
-    player = "❌"
-else:
-    player = "⚪"
+player = random.choice(["❌","⚪"])
 
 def new_game():
     global player,rounds,board,available_moves,new_board
@@ -18,10 +15,7 @@ def new_game():
            [" 4"," 5"," 6"],
            [" 7"," 8"," 9"]]
     available_moves = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    if random.randint(1,2)==1:
-        player="❌"
-    else:
-        player="⚪"
+    player = random.choice(["❌", "⚪"])
 
 o_win= x_win= 0
 rounds=1
